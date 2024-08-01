@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Branding Website</title>
+    <style>
+        body {
+            background-image: url('tes1/back.png');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .portofolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .portofolio-item {
+            margin: 20px;
+            width: calc(33.33% - 20px);
+        }
+
+        .portofolio-item img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .portofolio-item h2 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #contact {
+            background-color: #f7f7f7;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h1 {
+            margin-top: 0;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contact label {
+            margin-bottom: 10px;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #contact input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .copyraight{
+            background-color: Gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 25px;
+            vertical-align: bottom;
+        }
+        i{
+            list-style: none;
+            font-size: 5px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#portofolio">P5</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+                <i href="#portofolio">Proyek Penguat Pelajar Pancasila</i>
+        </nav>
+    </header>
+    <main>
+        <section id="portofolio">
+            <h1>Pembuatan Bucket</h1>
+            <div class="portofolio-container">
+                <div class="portofolio-item">
+                    <img src="https://i9.ytimg.com/vi/HVLgL9fs6bs/mqdefault.jpg?v=65439938&sqp=CNCNrrUG&rs=AOn4CLBFQcb1IVsjKIZDmA4GCVRUy7ozOQ" alt="Project 1" href="https://youtu.be/HVLgL9fs6bs">
+                    <h2><a href="https://youtu.be/HVLgL9fs6bs">Bucket Snack</a></h2>
+                    <p>
+                        Siswa di ajarkan membuat bucket menggunakan bahan utama jajan Snack siswa di latih untuk melaksanakan kerja kelompok
+                    </p>
+                </div>
+                <div class="portofolio-item">
+                    <img src="https://i9.ytimg.com/vi_webp/jupu2pm3A5Y/mqdefault.webp?v=65327f21&sqp=CNCNrrUG&rs=AOn4CLCWNlElRkEr92E5G7p5yyt-gisuQA" alt="Project 2" href="https://youtu.be/jupu2pm3A5Y">
+                    <h2><a href="https://youtu.be/jupu2pm3A5Y">Bucket Uang</a></h2>
+                    <p>
+                        Siswa di ajarkan membuat bucket menggunakan bahan utama uang mainan siswa di latih untuk melaksanakan kerja kelompok
+                    </p>
+                </div>
+                <!-- Tambahkan project lainnya di sini -->
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="copyraight">
+            &copy;AGV Team
+        </div>
+    </footer>
+    <script>
+    // Tambahkan fungsi untuk mengirimkan email menggunakan Gmail
+function sendEmail() {
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Silakan isi semua field");
+        return;
+    }
+
+    var link = "mailto:amirulgamespersonal@gmail.com"
+        + "?cc="
+        + "&subject=" + encodeURIComponent("Message from " + name)
+        + "&body=" + encodeURIComponent(message);
+
+    try {
+        window.location.href = link;
+    } catch (error) {
+        console.error(error);
+        alert("Gagal mengirimkan email");
+    }
+}
+
+document.getElementById("submit").addEventListener("click", sendEmail);
+</script>
+</body>
+</html>
